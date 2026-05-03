@@ -1,5 +1,7 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+import { ApiPlayer, ApiService } from './api.service';
 
 export interface Player {
   id: number;
@@ -16,10 +18,39 @@ export interface Player {
 @Injectable({ providedIn: "root" })
 export class PlayerService {
     private selectedSquadSubject = new BehaviorSubject<Player[]>([]);
-    selectedSquad$ = this.selectedSquadSubject.asObservable();
+    private playersSubject = new BehaviorSubject<Player[]>(this.getFallbackPlayers());
+    private fallbackImageUrl = 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=128&h=128&q=80';
 
-  getPlayers(): Player[] {
-        const fallbackImageUrl = 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=128&h=128&q=80';
+    selectedSquad$ = this.selectedSquadSubject.asObservable();
+    players$ = this.playersSubject.asObservable();
+
+    constructor(private api: ApiService) {}
+
+    loadPlayers(): Observable<Player[]> {
+        return this.api.getPlayers().pipe(
+            map((response) => response.players.map((player) => this.mapApiPlayer(player))),
+            tap((players) => this.playersSubject.next(players)),
+            catchError(() => {
+                const fallback = this.getFallbackPlayers();
+                this.playersSubject.next(fallback);
+                return of(fallback);
+            })
+        );
+    }
+
+    getPlayers(): Player[] {
+        return this.playersSubject.value;
+    }
+
+    getPlayersSnapshot(): Player[] {
+        return this.playersSubject.value;
+    }
+
+    getPlayersFallback(): Player[] {
+        return this.getFallbackPlayers();
+    }
+
+    private getFallbackPlayers(): Player[] {
         const players: Omit<Player, 'fallbackImageUrl'>[] = [
     {
         "description": "PC",
@@ -425,9 +456,29 @@ export class PlayerService {
 
         return players.map((player) => ({
             ...player,
-            fallbackImageUrl,
+            fallbackImageUrl: this.fallbackImageUrl,
         }));
-  }
+    }
+
+    private mapApiPlayer(player: ApiPlayer): Player {
+        return {
+            id: Number(player.id),
+            description: player.description ?? '',
+            cardName: player.cardName ?? 'Unknown',
+            score: player.score ?? this.estimateScore(player),
+            rarity: player.rarity ?? 'common',
+            imageUrl: player.imageUrl ?? this.fallbackImageUrl,
+            fallbackImageUrl: this.fallbackImageUrl,
+            cardCost: player.cardCost ?? 0,
+            role: player.role ?? 'BAT',
+        };
+    }
+
+    private estimateScore(player: ApiPlayer) {
+        const power = player.baseStats?.power ?? 70;
+        const defense = player.baseStats?.defense ?? 70;
+        return Math.round((power + defense) * (player.formFactor ?? 1));
+    }
 
     getPlayerById(id: number): Player | undefined {
         return this.getPlayers().find((player) => player.id === id);

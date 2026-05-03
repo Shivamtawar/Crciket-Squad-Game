@@ -14,11 +14,13 @@ const authRoutes = require("./routes/auth");
 const draftRoutes = require("./routes/draft");
 const matchRoutes = require("./routes/match");
 const coachRoutes = require("./routes/coach");
+const aiRoutes = require("./routes/ai");
 
 app.use("/auth", authRoutes);
 app.use("/draft", draftRoutes);
 app.use("/match", matchRoutes);
 app.use("/coach", coachRoutes);
+app.use("/ai", aiRoutes);
 
 // ─── Health Check ──────────────────────────────────────────────
 app.get("/health", (req, res) => {
@@ -37,6 +39,11 @@ app.get("/health", (req, res) => {
       ],
       match: ["POST /match/runMatch"],
       coach: ["POST /coach/getCoachInsights"],
+      ai: [
+        "POST /ai/auto-suggest",
+        "GET /ai/player-analysis/:playerId",
+        "POST /ai/team-analysis"
+      ],
     },
   });
 });

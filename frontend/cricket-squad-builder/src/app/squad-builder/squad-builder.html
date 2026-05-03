@@ -17,7 +17,8 @@
     <div cdkDropList [cdkDropListData]="pool" (cdkDropListDropped)="drop($event)"
          class="grid grid-cols-3 gap-4 min-h-[400px]">
       <div *ngFor="let player of filteredPool" cdkDrag
-           class="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition-all cursor-grab relative">
+           (click)="openAnalytics(player)"
+           class="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition-all cursor-grab relative group">
         <div class="absolute top-3 right-3 text-[10px] font-black bg-slate-100 px-2 py-0.5 rounded">{{player.role}}</div>
            <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
              class="w-16 h-16 rounded-full mx-auto mb-3 border-2 border-indigo-500 p-0.5">
@@ -43,14 +44,23 @@
         <h2 class="text-xl font-bold">Your Squad</h2>
         <p class="text-sm text-slate-400">{{mySquad.length}}/11 Selected</p>
       </div>
-      <button class="text-red-500 text-sm font-bold flex items-center">🔄 RESET</button>
+      <div class="flex items-center gap-3">
+        <button (click)="openWinProbability()"
+                class="text-emerald-600 text-sm font-bold flex items-center"
+                [class.opacity-40]="mySquad.length < 7"
+                [class.pointer-events-none]="mySquad.length < 7">
+          📈 WIN PROB
+        </button>
+        <button class="text-red-500 text-sm font-bold flex items-center">🔄 RESET</button>
+      </div>
     </div>
 
     <div cdkDropList [cdkDropListData]="mySquad" (cdkDropListDropped)="drop($event)"
          class="flex-1 space-y-3 min-h-[300px] border-2 border-dashed border-slate-100 rounded-2xl p-4">
       
       <div *ngFor="let player of mySquad" cdkDrag
-           class="bg-slate-50 p-3 rounded-xl flex items-center justify-between border">
+           (click)="openAnalytics(player)"
+           class="bg-slate-50 p-3 rounded-xl flex items-center justify-between border cursor-pointer hover:bg-slate-100 transition-colors">
         <div class="flex items-center space-x-3">
           <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)" class="w-10 h-10 rounded-full border">
           <div>
@@ -66,8 +76,140 @@
       </div>
     </div>
 
-    <button class="mt-6 w-full py-4 bg-gray-100 text-slate-400 rounded-2xl font-black uppercase tracking-widest flex items-center justify-center">
+
+    <button (click)="getAiSuggestion()"
+            class="mt-6 w-full py-4 bg-indigo-50 text-indigo-600 rounded-2xl font-black uppercase tracking-widest flex items-center justify-center border-2 border-indigo-100 hover:bg-indigo-100 transition-all mb-3">
+      <span class="mr-2">✨</span> AI Auto-Draft Squad
+    </button>
+
+    <button class="w-full py-4 bg-gray-100 text-slate-400 rounded-2xl font-black uppercase tracking-widest flex items-center justify-center">
       <span class="mr-2">🧠</span> Get AI Coach Critique
     </button>
+   </div>
+ </div>
+
+  <!-- Win Probability Modal -->
+  <div *ngIf="showWinProbability" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" (click)="closeWinProbability()"></div>
+
+    <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl relative z-10 overflow-hidden">
+      <div class="bg-emerald-600 p-6 text-white relative">
+        <button (click)="closeWinProbability()" class="absolute top-4 right-4 text-white/60 hover:text-white transition-colors">
+          <span class="text-2xl font-bold">✕</span>
+        </button>
+        <h3 class="text-2xl font-black">Win Probability</h3>
+        <p class="text-sm text-emerald-100">AI projection based on your current XI.</p>
+      </div>
+
+      <div class="p-6">
+        <div *ngIf="loadingWinProbability" class="text-sm text-slate-500">Calculating probability...</div>
+
+        <div *ngIf="!loadingWinProbability && winProbabilityData" class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase text-slate-400">Projected Win Chance</span>
+            <span class="text-3xl font-black text-emerald-600">{{winProbabilityData.winProbability}}%</span>
+          </div>
+          <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full transition-all duration-1000"
+                 [style.width.%]="winProbabilityData.winProbability"></div>
+          </div>
+          <div class="rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+            <p class="text-xs uppercase tracking-widest text-emerald-600 font-black mb-2">Key Factor</p>
+            <p class="text-sm text-emerald-900">{{winProbabilityData.keyFactor}}</p>
+          </div>
+          <p class="text-[10px] uppercase text-slate-400">Boss difficulty: {{winProbabilityData.bossDifficultyMatch}}</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+
+ <!-- AI Player Analytics Modal -->
+ <div *ngIf="selectedPlayerForAnalytics" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+   <!-- Backdrop -->
+   <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" (click)="closeAnalytics()"></div>
+   
+   <!-- Modal Content -->
+   <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl relative z-10 overflow-hidden flex flex-col max-h-[90vh]">
+     <!-- Modal Header -->
+     <div class="bg-indigo-600 p-8 text-white relative">
+       <button (click)="closeAnalytics()" class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors">
+         <span class="text-2xl font-bold">✕</span>
+       </button>
+       
+       <div class="flex items-center space-x-6">
+         <img [src]="selectedPlayerForAnalytics.imageUrl" (error)="onPlayerImageError($event, selectedPlayerForAnalytics)"
+              class="w-24 h-24 rounded-2xl border-4 border-white/20 shadow-lg object-cover">
+         <div>
+           <h2 class="text-3xl font-black italic">{{selectedPlayerForAnalytics.cardName}}</h2>
+           <div class="flex items-center space-x-3 mt-1">
+             <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{{selectedPlayerForAnalytics.role}}</span>
+             <span class="text-indigo-100 font-medium">Cost: {{selectedPlayerForAnalytics.cardCost}} Cr</span>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Modal Body -->
+     <div class="p-8 overflow-y-auto">
+       <!-- AI Analysis Section -->
+       <div class="mb-8">
+         <div class="flex items-center space-x-2 mb-4">
+           <span class="text-xl">✨</span>
+           <h3 class="text-lg font-bold text-slate-800">AI Scout Analysis</h3>
+         </div>
+         
+         <div *ngIf="loadingAnalysis" class="flex flex-col space-y-3">
+           <div class="h-4 bg-slate-100 rounded animate-pulse w-full"></div>
+           <div class="h-4 bg-slate-100 rounded animate-pulse w-5/6"></div>
+           <div class="h-4 bg-slate-100 rounded animate-pulse w-4/6"></div>
+         </div>
+         
+         <div *ngIf="!loadingAnalysis && playerAnalysis">
+           <p class="text-slate-600 leading-relaxed mb-6 italic">"{{playerAnalysis.analysis}}"</p>
+           
+           <!-- Strengths & Weaknesses -->
+           <div class="grid grid-cols-2 gap-6 mb-8">
+             <div class="bg-green-50 p-4 rounded-2xl border border-green-100">
+               <h4 class="text-xs font-black text-green-600 uppercase tracking-widest mb-2">Strengths</h4>
+               <ul class="space-y-1">
+                 <li *ngFor="let s of playerAnalysis.strengths" class="text-sm font-bold text-green-800 flex items-center">
+                   <span class="mr-2">⚡</span> {{s}}
+                 </li>
+               </ul>
+             </div>
+             <div class="bg-red-50 p-4 rounded-2xl border border-red-100">
+               <h4 class="text-xs font-black text-red-600 uppercase tracking-widest mb-2">Weaknesses</h4>
+               <ul class="space-y-1">
+                 <li *ngFor="let w of playerAnalysis.weaknesses" class="text-sm font-bold text-red-800 flex items-center">
+                   <span class="mr-2">🎯</span> {{w}}
+                 </li>
+               </ul>
+             </div>
+           </div>
+
+           <!-- 5-Year Performance Chart (CSS Bar Chart) -->
+           <div>
+             <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-6">Past 5 Years Performance</h4>
+             <div class="flex items-end justify-between h-40 px-4">
+               <div *ngFor="let stat of playerAnalysis.statsTrend" class="flex flex-col items-center flex-1 group">
+                 <div class="w-12 bg-indigo-500 rounded-t-lg transition-all duration-500 relative group-hover:bg-indigo-400"
+                      [style.height.%]="stat.performanceScore">
+                   <!-- Tooltip -->
+                   <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] font-bold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                     Score: {{stat.performanceScore}}
+                   </div>
+                 </div>
+                 <span class="text-[10px] font-bold text-slate-400 mt-3">{{stat.year}}</span>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       
+       <button (click)="closeAnalytics()" 
+               class="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold shadow-xl hover:bg-slate-800 transition-all hover:scale-[1.02] active:scale-95">
+         Close Scouting Report
+       </button>
+     </div>
+   </div>
+ </div>

@@ -20,8 +20,10 @@ export class CoachCritique implements OnInit {
   ) {}
 
   ngOnInit() {
-    // For demo purposes, we're pulling the first 11 players
-    this.selectedSquad = this.playerService.getPlayers().slice(0, 11);
+    this.playerService.loadPlayers().subscribe((players) => {
+      const selected = this.playerService.getSelectedSquad();
+      this.selectedSquad = selected.length ? selected : players.slice(0, 11);
+    });
   }
 
   onPlayerImageError(event: Event, player: Player) {

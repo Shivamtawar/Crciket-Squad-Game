@@ -19,12 +19,14 @@ backend/
 │   ├── engines/
 │   │   ├── validationEngine.js    ← Draft rules (budget, roles, caps)
 │   │   ├── matchEngine.js         ← Weighted probability simulation
-│   │   └── coachEngine.js         ← AI strategic advisor
+│   │   ├── coachEngine.js         ← AI strategic advisor
+│   │   └── aiEngine.js            ← Gemini-powered analytics & suggestions
 │   ├── routes/
 │   │   ├── auth.js                ← POST /signup, /login
 │   │   ├── draft.js               ← Draft CRUD + validation
 │   │   ├── match.js               ← POST /runMatch
-│   │   └── coach.js               ← POST /getCoachInsights
+│   │   ├── coach.js               ← POST /getCoachInsights
+│   │   └── ai.js                  ← AI endpoints (Gemini integration)
 │   ├── index.js                   ← Express entry → Cloud Function
 │   └── seed.js                    ← Database seeder
 ├── firebase.json                  ← Emulator config
@@ -49,6 +51,10 @@ backend/
 | `GET` | `/draft/session/:id` | Yes | Get session state + team details |
 | `POST` | `/match/runMatch` | Yes | Run 20-over match simulation |
 | `POST` | `/coach/getCoachInsights` | Yes | Get AI coaching strategy |
+| `POST` | `/ai/auto-suggest` | Yes | AI suggests best 11-player squad (Gemini) |
+| `GET` | `/ai/player-analysis/:id`| Yes | Deep individual player performance review |
+| `POST` | `/ai/team-analysis` | Yes | Overall squad rating & strategic audit |
+| `POST` | `/ai/win-probability` | Yes | AI-calculated win chance against Pro boss |
 
 ---
 
@@ -77,8 +83,15 @@ Generates a 20-over play-by-play log with:
 - **🛡️ Defensive**: Warns about weak bowling lineup
 - **🧤 Reminder**: Alerts if no wicket-keeper picked
 
-### 4. Security Rules
+### 4. Gemini AI Integration (New 🚀)
+The backend now leverages the **Google Gemini 1.5 Flash** model to provide:
+- **Auto-Drafting**: Scans the player pool to build the most mathematically optimal squad for your remaining credits.
+- **Player Trends**: Generates synthetic "Past 5 Years" performance metrics and trends based on player attributes.
+- **Squad Auditing**: Provides a qualitative 1-100 rating and strategic improvements for your team.
+
+### 5. Security Rules
 All client writes blocked. Only the Admin SDK (Cloud Functions) can mutate game data.
+AI API keys are protected in `.env` and never exposed to the frontend.
 
 ---
 

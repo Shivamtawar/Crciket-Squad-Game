@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ApiService } from '../api.service';
 import { Player, PlayerService } from '../player.service';
 
 @Component({
@@ -18,18 +19,28 @@ export class Match implements OnInit {
   resultHeadline = '';
   resultDetail = '';
   error: string | null = null;
+  winProbability: number | null = null;
+  winKeyFactor = '';
+  winDifficulty = '';
+  loadingWinProbability = false;
 
-  constructor(private playerService: PlayerService) {}
+  constructor(
+    private playerService: PlayerService,
+    private api: ApiService,
+  ) {}
 
   ngOnInit() {
-    this.userSquad = [...this.playerService.getSelectedSquad()];
+    this.playerService.loadPlayers().subscribe(() => {
+      this.userSquad = [...this.playerService.getSelectedSquad()];
 
-    if (this.userSquad.length !== 11) {
-      this.error = 'Pick 11 players to start a match.';
-      return;
-    }
+      if (this.userSquad.length !== 11) {
+        this.error = 'Pick 11 players to start a match.';
+        return;
+      }
 
-    this.simulateMatch();
+      this.simulateMatch();
+      this.loadWinProbability();
+    });
   }
 
   simulateMatch() {
@@ -50,6 +61,26 @@ export class Match implements OnInit {
       this.resultHeadline = 'Computer wins the match';
       this.resultDetail = `Defeat margin: ${margin} impact points`;
     }
+  }
+
+  loadWinProbability() {
+    this.loadingWinProbability = true;
+    const teamIds = this.userSquad.map((player) => player.id);
+
+    this.api.getWinProbability(teamIds).subscribe({
+      next: (response) => {
+        this.winProbability = response.winProbability;
+        this.winKeyFactor = response.keyFactor;
+        this.winDifficulty = response.bossDifficultyMatch;
+        this.loadingWinProbability = false;
+      },
+      error: () => {
+        this.winProbability = 52;
+        this.winKeyFactor = 'Balanced batting and bowling mix.';
+        this.winDifficulty = 'medium';
+        this.loadingWinProbability = false;
+      }
+    });
   }
 
   onPlayerImageError(event: Event, player: Player) {

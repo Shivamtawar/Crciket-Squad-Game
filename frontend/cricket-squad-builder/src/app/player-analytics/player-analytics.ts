@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ApiService } from '../api.service';
 import { Player, PlayerService } from '../player.service';
 
 @Component({
@@ -13,6 +14,8 @@ import { Player, PlayerService } from '../player.service';
 export class PlayerAnalytics implements OnInit {
   player: Player | null = null;
   error: string | null = null;
+  loading = true;
+  analysisText = '';
 
   strengths: string[] = [];
   weaknesses: string[] = [];
@@ -21,6 +24,7 @@ export class PlayerAnalytics implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private playerService: PlayerService,
+    private api: ApiService,
   ) {}
 
   ngOnInit() {
@@ -32,17 +36,36 @@ export class PlayerAnalytics implements OnInit {
       return;
     }
 
-    const player = this.playerService.getPlayerById(id);
+    this.playerService.loadPlayers().subscribe((players) => {
+      const player = players.find((item) => item.id === id);
 
-    if (!player) {
-      this.error = 'Player not found.';
-      return;
-    }
+      if (!player) {
+        this.error = 'Player not found.';
+        this.loading = false;
+        return;
+      }
 
-    this.player = player;
-    this.strengths = this.getStrengths(player.role);
-    this.weaknesses = this.getWeaknesses(player.role);
-    this.formTrend = this.getFormTrend(player.score);
+      this.player = player;
+      this.strengths = this.getStrengths(player.role);
+      this.weaknesses = this.getWeaknesses(player.role);
+      this.formTrend = this.getFormTrend(player.score);
+
+      this.api.getPlayerAnalysis(id).subscribe({
+        next: (analysis) => {
+          this.analysisText = analysis.analysis;
+          this.strengths = analysis.strengths?.length ? analysis.strengths : this.strengths;
+          this.weaknesses = analysis.weaknesses?.length ? analysis.weaknesses : this.weaknesses;
+          this.formTrend = analysis.statsTrend?.length
+            ? analysis.statsTrend.map((entry) => entry.performanceScore)
+            : this.formTrend;
+          this.loading = false;
+        },
+        error: () => {
+          this.analysisText = 'AI analysis is unavailable right now. Showing baseline scouting notes.';
+          this.loading = false;
+        }
+      });
+    });
   }
 
   onPlayerImageError(event: Event, player: Player) {
