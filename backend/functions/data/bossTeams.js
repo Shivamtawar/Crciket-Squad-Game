@@ -1,0 +1,85 @@
+/**
+ * Boss Teams — 3 difficulty levels for Match Simulation
+ *
+ * Each boss team has aggregate stats that the Match Engine
+ * compares against the user's drafted team.
+ */
+const bossTeams = [
+  {
+    id: "easy",
+    name: "Dhaka Dynamos",
+    difficulty: "easy",
+    description: "A scrappy underdog team. Beatable with a balanced squad.",
+    avgPower: 65,
+    avgDefense: 60,
+    formFactor: 1.0,
+    bowlingStrength: 58,
+    battingStrength: 68,
+    specialAbility: "None",
+    players: [
+      { name: "Tamim Iqbal", role: "BAT", power: 70, defense: 62 },
+      { name: "Mushfiqur Rahim", role: "WK", power: 65, defense: 68 },
+      { name: "Shakib Al Hasan", role: "AR", power: 72, defense: 70 },
+      { name: "Mahmudullah", role: "AR", power: 60, defense: 58 },
+      { name: "Liton Das", role: "BAT", power: 68, defense: 55 },
+      { name: "Soumya Sarkar", role: "BAT", power: 58, defense: 52 },
+      { name: "Mehidy Hasan", role: "BWL", power: 50, defense: 65 },
+      { name: "Taskin Ahmed", role: "BWL", power: 48, defense: 62 },
+      { name: "Mustafizur Rahman", role: "BWL", power: 52, defense: 66 },
+      { name: "Shoriful Islam", role: "BWL", power: 45, defense: 55 },
+      { name: "Afif Hossain", role: "BAT", power: 62, defense: 50 },
+    ],
+  },
+  {
+    id: "medium",
+    name: "Sydney Thunder",
+    difficulty: "medium",
+    description: "A well-rounded franchise. You'll need smart picks to beat them.",
+    avgPower: 75,
+    avgDefense: 72,
+    formFactor: 1.1,
+    bowlingStrength: 74,
+    battingStrength: 76,
+    specialAbility: "Momentum Shift — gains +3% after each wicket taken",
+    players: [
+      { name: "David Warner", role: "BAT", power: 88, defense: 70 },
+      { name: "Steve Smith", role: "BAT", power: 82, defense: 80 },
+      { name: "Glenn Maxwell", role: "AR", power: 85, defense: 65 },
+      { name: "Mitchell Starc", role: "BWL", power: 60, defense: 90 },
+      { name: "Josh Hazlewood", role: "BWL", power: 55, defense: 88 },
+      { name: "Alex Carey", role: "WK", power: 72, defense: 74 },
+      { name: "Marcus Stoinis", role: "AR", power: 78, defense: 68 },
+      { name: "Adam Zampa", role: "BWL", power: 50, defense: 82 },
+      { name: "Travis Head", role: "BAT", power: 80, defense: 72 },
+      { name: "Cameron Green", role: "AR", power: 75, defense: 70 },
+      { name: "Nathan Lyon", role: "BWL", power: 48, defense: 78 },
+    ],
+  },
+  {
+    id: "hard",
+    name: "Mumbai Legends",
+    difficulty: "hard",
+    description: "The ultimate boss. Only elite squads can challenge them.",
+    avgPower: 88,
+    avgDefense: 85,
+    formFactor: 1.18,
+    bowlingStrength: 90,
+    battingStrength: 92,
+    specialAbility: "Clutch Gene — +5% stats boost in final 5 overs",
+    players: [
+      { name: "Sachin Tendulkar", role: "BAT", power: 98, defense: 92 },
+      { name: "Brian Lara", role: "BAT", power: 96, defense: 85 },
+      { name: "Jacques Kallis", role: "AR", power: 90, defense: 92 },
+      { name: "Shane Warne", role: "BWL", power: 55, defense: 97 },
+      { name: "Wasim Akram", role: "BWL", power: 60, defense: 96 },
+      { name: "Adam Gilchrist", role: "WK", power: 92, defense: 88 },
+      { name: "Garfield Sobers", role: "AR", power: 88, defense: 90 },
+      { name: "Dale Steyn", role: "BWL", power: 58, defense: 95 },
+      { name: "AB de Villiers", role: "BAT", power: 95, defense: 82 },
+      { name: "Muttiah Muralitharan", role: "BWL", power: 50, defense: 98 },
+      { name: "Kapil Dev", role: "AR", power: 85, defense: 88 },
+    ],
+  },
+];
+
+module.exports = bossTeams;

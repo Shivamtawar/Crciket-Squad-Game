@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ─── Players: Read-only for authenticated users, NO client writes ───
+    match /players/{playerId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // ─── Boss Teams: Read-only for authenticated users ───
+    match /bossTeams/{teamId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // ─── Game Sessions: Users can only read their OWN sessions, NO client writes ───
+    match /gameSessions/{sessionId} {
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow write: if false;
+    }
+
+    // ─── Default: Deny everything else ───
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
