@@ -1,0 +1,154 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "description": "PC",
+      "cardName": "Pat Cummins",
+      "score": 249,
+      "rarity": "epic",
+      "role": "BWL",
+      "cardCost": 10,
+      "imageUrl": "https://res.cloudinary.com/dyfozi2kf/image/upload/v1753661814/cricket-cards/fptcmbpjlbwpvte4hpna.png"
+    },
+    {
+      "id": 2,
+      "description": "VK",
+      "cardName": "Virat Kohli",
+      "score": 250,
+      "rarity": "epic",
+      "role": "BAT",
+      "cardCost": 10,
+      "imageUrl": "https://res.cloudinary.com/dyfozi2kf/image/upload/v1753659285/cricket-cards/zblgxtmyq3glfgza54g8.png"
+    },
+    {
+      "id": 3,
+      "description": "MS",
+      "cardName": "MS Dhoni",
+      "score": 244,
+      "rarity": "epic",
+      "role": "WK",
+      "cardCost": 9.5,
+      "imageUrl": "https://res.cloudinary.com/dyfozi2kf/image/upload/v1753659575/cricket-cards/fzmz3dmg0nf9ycqgwuec.png"
+    },
+    {
+      "id": 4,
+      "description": "RJ",
+      "cardName": "Ravindra Jadeja",
+      "score": 240,
+      "rarity": "epic",
+      "role": "AR",
+      "cardCost": 9.5,
+      "imageUrl": "https://res.cloudinary.com/dyfozi2kf/image/upload/v1753659433/cricket-cards/cbxw2nbh2blmfioxe4hh.png"
+    },
+    {
+      "id": 5,
+      "description": "JB",
+      "cardName": "Jasprit Bumrah",
+      "score": 250,
+      "rarity": "epic",
+      "role": "BWL",
+      "cardCost": 10,
+      "imageUrl": "https://res.cloudinary.com/dyfozi2kf/image/upload/v1753659356/cricket-cards/fhhieriwpa0wvsgcolum.png"
+    },
+    {
+      "id": 6,
+      "description": "RS",
+      "cardName": "Rohit Sharma",
+      "score": 245,
+      "rarity": "epic",
+      "role": "BAT",
+      "cardCost": 9.5,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=RS&backgroundColor=1a56db"
+    },
+    {
+      "id": 7,
+      "description": "SKY",
+      "cardName": "Suryakumar Yadav",
+      "score": 242,
+      "rarity": "rare",
+      "role": "BAT",
+      "cardCost": 9,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=SKY&backgroundColor=7e3af2"
+    },
+    {
+      "id": 8,
+      "description": "RK",
+      "cardName": "Rashid Khan",
+      "score": 246,
+      "rarity": "epic",
+      "role": "BWL",
+      "cardCost": 9.5,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=RK&backgroundColor=057a55"
+    },
+    {
+      "id": 9,
+      "description": "BA",
+      "cardName": "Babar Azam",
+      "score": 243,
+      "rarity": "rare",
+      "role": "BAT",
+      "cardCost": 9,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=BA&backgroundColor=c81e1e"
+    },
+    {
+      "id": 10,
+      "description": "HP",
+      "cardName": "Hardik Pandya",
+      "score": 238,
+      "rarity": "rare",
+      "role": "AR",
+      "cardCost": 8.5,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=HP&backgroundColor=e3a008"
+    },
+    {
+      "id": 11,
+      "description": "JBu",
+      "cardName": "Jos Buttler",
+      "score": 241,
+      "rarity": "rare",
+      "role": "WK",
+      "cardCost": 9,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=JBu&backgroundColor=1a56db"
+    },
+    {
+      "id": 12,
+      "description": "MSt",
+      "cardName": "Mitchell Starc",
+      "score": 237,
+      "rarity": "rare",
+      "role": "BWL",
+      "cardCost": 8.5,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=MSt&backgroundColor=7e3af2"
+    },
+    {
+      "id": 13,
+      "description": "KW",
+      "cardName": "Kane Williamson",
+      "score": 239,
+      "rarity": "rare",
+      "role": "BAT",
+      "cardCost": 8.5,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=KW&backgroundColor=057a55"
+    },
+    {
+      "id": 14,
+      "description": "YC",
+      "cardName": "Yuzvendra Chahal",
+      "score": 233,
+      "rarity": "uncommon",
+      "role": "BWL",
+      "cardCost": 7.5,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=YC&backgroundColor=c81e1e"
+    },
+    {
+      "id": 15,
+      "description": "SG",
+      "cardName": "Shubman Gill",
+      "score": 236,
+      "rarity": "uncommon",
+      "role": "BAT",
+      "cardCost": 8,
+      "imageUrl": "https://api.dicebear.com/7.x/initials/svg?seed=SG&backgroundColor=e3a008"
+    }
+  ]
+}

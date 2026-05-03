@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { Sidebar } from './sidebar/sidebar';
 import { Header } from './header/header';
-import { SquadBuilder } from './squad-builder/squad-builder';
 
 @Component({
   selector: 'app-root',
-  imports: [Sidebar, Header, SquadBuilder],
+  imports: [Sidebar, Header, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
