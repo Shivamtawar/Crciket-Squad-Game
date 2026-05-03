@@ -2,6 +2,13 @@
   <h1 class="text-xl font-black text-slate-800 tracking-tight italic">SQUAD BUILDER XI</h1>
   
   <div class="flex items-center space-x-8">
+    <ng-container *ngIf="selectedSquad$ | async as squad">
+      <button (click)="startMatch(squad.length)"
+              [disabled]="squad.length !== 11"
+              class="px-4 py-2 rounded-xl font-black uppercase tracking-widest text-xs border border-emerald-500 text-emerald-600 hover:bg-emerald-50 transition disabled:opacity-40 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400">
+        Play Match
+      </button>
+    </ng-container>
     <div class="flex flex-col items-end">
       <div class="flex items-center space-x-2">
         <span class="text-xl font-bold">85</span><span class="text-slate-400">/100</span>

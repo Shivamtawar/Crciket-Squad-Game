@@ -1,0 +1,66 @@
+<div class="max-w-5xl mx-auto">
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <a routerLink="/" class="text-sm font-bold text-slate-500 hover:text-slate-700">Back to squad builder</a>
+      <h1 class="text-3xl font-black text-slate-900 mt-2">Player Analytics</h1>
+      <p class="text-sm text-slate-500">Tactical insights and performance trend</p>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="p-6 rounded-2xl border bg-white text-red-600 font-bold">
+    {{ error }}
+  </div>
+
+  <div *ngIf="player" class="grid grid-cols-12 gap-6">
+    <div class="col-span-4 bg-white border rounded-3xl p-6 shadow-sm">
+      <div class="flex flex-col items-center">
+        <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
+             class="w-28 h-28 rounded-full border-4 border-indigo-500 mb-4">
+        <h2 class="text-xl font-black text-slate-900">{{ player.cardName }}</h2>
+        <p class="text-xs uppercase tracking-widest text-slate-400">{{ player.role }} • {{ player.rarity }}</p>
+      </div>
+      <div class="mt-6 space-y-3 text-sm">
+        <div class="flex justify-between">
+          <span class="text-slate-500">Score</span>
+          <span class="font-bold text-slate-900">{{ player.score }}</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500">Cost</span>
+          <span class="font-bold text-slate-900">{{ player.cardCost }} Cr</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500">Card Tag</span>
+          <span class="font-bold text-slate-900">{{ player.description }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-8 space-y-6">
+      <div class="bg-white border rounded-3xl p-6 shadow-sm">
+        <h3 class="text-sm font-black uppercase tracking-widest text-slate-500">Form Trend</h3>
+        <div class="mt-4 flex items-end gap-3 h-32">
+          <div *ngFor="let value of formTrend" class="flex-1 rounded-xl bg-indigo-100 border border-indigo-200">
+            <div class="rounded-xl bg-indigo-500" [style.height.%]="value"></div>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 mt-3">Mock performance index based on recent matches.</p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="bg-white border rounded-3xl p-6 shadow-sm">
+          <h3 class="text-sm font-black uppercase tracking-widest text-slate-500">Core Strengths</h3>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li *ngFor="let item of strengths">{{ item }}</li>
+          </ul>
+        </div>
+
+        <div class="bg-white border rounded-3xl p-6 shadow-sm">
+          <h3 class="text-sm font-black uppercase tracking-widest text-slate-500">Risk Areas</h3>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li *ngFor="let item of weaknesses">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="max-w-6xl mx-auto space-y-6">
+  <div class="flex items-center justify-between">
+    <div>
+      <a routerLink="/" class="text-sm font-bold text-slate-500 hover:text-slate-700">Back to squad builder</a>
+      <h1 class="text-3xl font-black text-slate-900 mt-2">Match Center</h1>
+      <p class="text-sm text-slate-500">Your XI takes on a computer-selected XI.</p>
+    </div>
+    <button (click)="simulateMatch()"
+            class="px-4 py-2 rounded-xl font-bold text-sm border border-slate-200 text-slate-700 hover:bg-slate-50">
+      Simulate Again
+    </button>
+  </div>
+
+  <div *ngIf="error" class="p-6 rounded-2xl border bg-white text-red-600 font-bold">
+    {{ error }}
+  </div>
+
+  <div *ngIf="!error" class="space-y-6">
+    <div class="grid grid-cols-3 gap-6">
+      <div class="col-span-2 bg-white border rounded-3xl p-6 shadow-sm">
+        <h2 class="text-xs font-black uppercase tracking-widest text-slate-400">Match Result</h2>
+        <p class="text-2xl font-black text-slate-900 mt-2">{{ resultHeadline }}</p>
+        <p class="text-sm text-slate-500 mt-1">{{ resultDetail }}</p>
+
+        <div class="mt-6 grid grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl border bg-slate-50">
+            <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Your XI Score</p>
+            <p class="text-2xl font-black text-emerald-600 mt-2">{{ userTotal }}</p>
+          </div>
+          <div class="p-4 rounded-2xl border bg-slate-50">
+            <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Computer XI Score</p>
+            <p class="text-2xl font-black text-indigo-600 mt-2">{{ cpuTotal }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border rounded-3xl p-6 shadow-sm">
+        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Momentum</h3>
+        <div class="mt-4 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <span class="text-emerald-600">Your XI</span>
+            <span class="text-slate-400">{{ userTotal }}</span>
+          </div>
+          <div class="h-2 rounded-full bg-emerald-100 overflow-hidden">
+            <div class="h-full bg-emerald-500" [style.width.%]="(userTotal / (userTotal + cpuTotal)) * 100"></div>
+          </div>
+          <div class="flex items-center justify-between text-xs font-bold mt-4">
+            <span class="text-indigo-600">Computer XI</span>
+            <span class="text-slate-400">{{ cpuTotal }}</span>
+          </div>
+          <div class="h-2 rounded-full bg-indigo-100 overflow-hidden">
+            <div class="h-full bg-indigo-500" [style.width.%]="(cpuTotal / (userTotal + cpuTotal)) * 100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6">
+      <div class="bg-white border rounded-3xl p-6 shadow-sm">
+        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Your XI</h3>
+        <div class="mt-4 space-y-3">
+          <div *ngFor="let player of userSquad" class="flex items-center justify-between p-2 border rounded-xl">
+            <div class="flex items-center gap-3">
+              <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
+                   class="w-9 h-9 rounded-full border">
+              <div>
+                <p class="text-sm font-bold text-slate-800">{{ player.cardName }}</p>
+                <p class="text-[10px] text-slate-400 uppercase">{{ player.role }}</p>
+              </div>
+            </div>
+            <span class="text-xs font-black text-slate-500">{{ player.score }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border rounded-3xl p-6 shadow-sm">
+        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Computer XI</h3>
+        <div class="mt-4 space-y-3">
+          <div *ngFor="let player of cpuSquad" class="flex items-center justify-between p-2 border rounded-xl">
+            <div class="flex items-center gap-3">
+              <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
+                   class="w-9 h-9 rounded-full border">
+              <div>
+                <p class="text-sm font-bold text-slate-800">{{ player.cardName }}</p>
+                <p class="text-[10px] text-slate-400 uppercase">{{ player.role }}</p>
+              </div>
+            </div>
+            <span class="text-xs font-black text-slate-500">{{ player.score }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
