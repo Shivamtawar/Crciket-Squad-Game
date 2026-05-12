@@ -1,20 +1,23 @@
 <div class="flex gap-6 h-full bg-gray-50 p-4">
-  
-  <!-- Left Side: Selected Squad (Scrollable) -->
+
+  <!-- Left Side: Selected Squad -->
   <div class="w-1/3 bg-white border rounded-xl overflow-hidden flex flex-col shadow-sm">
     <div class="p-4 border-b flex justify-between items-center bg-gray-50/50">
       <h2 class="font-bold text-slate-800 uppercase tracking-tight">Selected Squad</h2>
-      <span class="text-xs font-bold bg-slate-200 px-2 py-1 rounded">11/11</span>
+      <span class="text-xs font-bold bg-slate-200 px-2 py-1 rounded">{{selectedSquad.length}}/11</span>
     </div>
-    
+
     <div class="flex-1 overflow-y-auto p-4 space-y-2">
-       <div *ngFor="let player of selectedSquad" (click)="openPlayer(player)"
-         class="flex items-center justify-between p-2 border rounded-lg hover:border-indigo-300 transition-colors bg-white cursor-pointer">
+      <div *ngFor="let player of selectedSquad; let i = index"
+           (click)="openPlayer(player)"
+           class="flex items-center justify-between p-2 border rounded-lg hover:border-indigo-300 transition-colors bg-white cursor-pointer">
         <div class="flex items-center gap-3">
-          <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)" class="w-10 h-10 rounded shadow-sm bg-slate-100">
+          <span class="text-[10px] font-black text-slate-400 w-4">{{i + 1}}</span>
+          <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
+               class="w-10 h-10 rounded object-cover shadow-sm bg-slate-100">
           <div>
             <p class="text-sm font-bold text-slate-800">{{player.cardName}}</p>
-            <p class="text-[10px] text-slate-400 uppercase font-medium">{{player.role}} • {{player.description}}</p>
+            <p class="text-[10px] text-slate-400 uppercase font-medium">{{player.role}} • {{player.score}} pts</p>
           </div>
         </div>
         <div class="text-right">
@@ -22,96 +25,161 @@
           <p class="text-[8px] text-slate-400 font-bold">CR</p>
         </div>
       </div>
+
+      <div *ngIf="selectedSquad.length === 0" class="h-32 flex items-center justify-center text-slate-300 italic text-sm">
+        No players selected yet
+      </div>
     </div>
 
+    <!-- Budget Footer -->
     <div class="p-4 border-t bg-slate-900 text-white">
       <div class="flex justify-between items-center mb-2">
         <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Remaining Budget</span>
-        <span class="font-black text-green-400">{{remainingBudget}} CR</span>
+        <span class="font-black"
+              [class.text-green-400]="remainingBudget > 0"
+              [class.text-red-400]="remainingBudget < 0"
+              [class.text-slate-400]="remainingBudget === 0">
+          {{remainingBudget}} CR
+        </span>
       </div>
       <div class="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
-        <div class="bg-green-500 h-full w-[15%]"></div>
+        <div class="h-full rounded-full transition-all duration-500"
+             [class.bg-green-500]="remainingBudget > 20"
+             [class.bg-amber-400]="remainingBudget > 0 && remainingBudget <= 20"
+             [class.bg-red-500]="remainingBudget <= 0"
+             [style.width.%]="budgetPct">
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Right Side: Coach Analysis -->
-  <div class="flex-1 flex flex-col gap-6">
-    
+  <div class="flex-1 flex flex-col gap-4 min-h-0">
+
     <!-- Coach Header -->
-    <div class="bg-white p-6 border rounded-2xl shadow-sm flex justify-between items-center">
+    <div class="bg-white p-5 border rounded-2xl shadow-sm flex justify-between items-center flex-shrink-0">
       <div class="flex items-center gap-4">
         <div class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center border-2 border-green-500 overflow-hidden">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-6 opacity-80">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" class="w-6 opacity-80">
         </div>
         <div>
-          <h2 class="text-2xl font-bold text-slate-900">Coach Gemini</h2>
+          <h2 class="text-xl font-bold text-slate-900">Coach Gemini</h2>
           <p class="text-xs text-green-600 flex items-center">
             <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
             Real-time tactical analysis active
           </p>
         </div>
       </div>
-      <div class="flex gap-3">
-        <button class="p-2 border rounded-lg hover:bg-gray-50">📊</button>
-        <button class="px-4 py-2 border rounded-lg text-sm font-bold text-slate-700 flex items-center gap-2">
-          🔗 Copy Squad Link
-        </button>
+      <div class="text-right">
+        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Squad Score</p>
+        <p class="text-2xl font-black text-indigo-600">
+          {{totalScore || '—'}}
+        </p>
       </div>
     </div>
 
     <!-- Main Commentary -->
-    <div class="bg-white p-8 border-l-4 border-green-500 rounded-2xl shadow-sm relative">
-        <span class="absolute top-4 right-8 text-6xl text-gray-100 font-serif">"</span>
-        <p class="text-slate-600 leading-relaxed text-lg italic">
-            "Your top order looks devastating, especially pairing Kohli and de Kock. However, I'm detecting a critical vulnerability in your death bowling phase. While Bumrah is exceptional, relying heavily on spinners like Khan and Jadeja at the Wankhede stadium under lights might leak runs in the final 5 overs. The pitch data suggests seamers taking 65% of wickets in the second innings here."
-        </p>
+    <div class="bg-white p-6 border-l-4 border-green-500 rounded-2xl shadow-sm relative flex-shrink-0">
+      <span class="absolute top-3 right-6 text-5xl text-gray-100 font-serif">"</span>
+
+      <div *ngIf="loadingAnalysis" class="space-y-3">
+        <div class="h-4 bg-slate-100 rounded-full animate-pulse w-full"></div>
+        <div class="h-4 bg-slate-100 rounded-full animate-pulse w-5/6"></div>
+        <div class="h-4 bg-slate-100 rounded-full animate-pulse w-4/6"></div>
+      </div>
+
+      <p *ngIf="!loadingAnalysis" class="text-slate-600 leading-relaxed italic">
+        "{{analysis.commentary}}"
+      </p>
     </div>
 
     <!-- Stats Cards -->
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-3 gap-4 flex-shrink-0">
+
+      <!-- Strengths -->
       <div class="bg-white p-5 border-t-4 border-green-500 rounded-xl shadow-sm">
-        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center mb-3">
-          ✅ Core Strengths
-        </h4>
-        <ul class="text-xs space-y-2 text-slate-600 font-medium">
-          <li>• Elite Top 3 batting average (54.2 combined).</li>
-          <li>• Excellent spin-choke potential in middle overs.</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-5 border-t-4 border-red-500 rounded-xl shadow-sm">
-        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center mb-3">
-          ⚠️ Vulnerabilities
-        </h4>
-        <ul class="text-xs space-y-2 text-slate-600 font-medium">
-          <li>• Lacking a dedicated death-overs pace specialist.</li>
-          <li>• Long tail; batting depth ends sharply at #7.</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-5 border-t-4 border-indigo-500 rounded-xl shadow-sm relative">
-        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center mb-3">
-          ⚖️ Tactical Swaps
-        </h4>
-        <div class="bg-slate-50 p-2 rounded border flex items-center justify-between">
-           <div>
-             <p class="text-[10px] text-red-400 line-through">M. Siraj (7.5)</p>
-             <p class="text-[10px] text-green-600 font-bold">M. Pathirana (8.0)</p>
-           </div>
-           <button class="text-xs">🔄</button>
+        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">✅ Core Strengths</h4>
+        <div *ngIf="loadingAnalysis" class="space-y-2">
+          <div class="h-3 bg-slate-100 rounded animate-pulse w-full"></div>
+          <div class="h-3 bg-slate-100 rounded animate-pulse w-4/5"></div>
         </div>
-        <p class="text-[9px] text-slate-400 mt-2">Adds death bowling strength. Requires 0.5cr from remaining budget.</p>
+        <ul *ngIf="!loadingAnalysis" class="text-xs space-y-2 text-slate-600 font-medium">
+          <li *ngFor="let s of analysis.strengths">• {{s}}</li>
+        </ul>
+      </div>
+
+      <!-- Vulnerabilities -->
+      <div class="bg-white p-5 border-t-4 border-red-500 rounded-xl shadow-sm">
+        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">⚠️ Vulnerabilities</h4>
+        <div *ngIf="loadingAnalysis" class="space-y-2">
+          <div class="h-3 bg-slate-100 rounded animate-pulse w-full"></div>
+          <div class="h-3 bg-slate-100 rounded animate-pulse w-3/4"></div>
+        </div>
+        <ul *ngIf="!loadingAnalysis" class="text-xs space-y-2 text-slate-600 font-medium">
+          <li *ngFor="let v of analysis.vulnerabilities">• {{v}}</li>
+        </ul>
+      </div>
+
+      <!-- Tactical Swaps -->
+      <div class="bg-white p-5 border-t-4 border-indigo-500 rounded-xl shadow-sm">
+        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">⚖️ Tactical Swaps</h4>
+        <div *ngIf="loadingAnalysis" class="space-y-2">
+          <div class="h-3 bg-slate-100 rounded animate-pulse w-full"></div>
+          <div class="h-3 bg-slate-100 rounded animate-pulse w-2/3"></div>
+        </div>
+        <div *ngIf="!loadingAnalysis">
+          <div *ngFor="let swap of analysis.swaps" class="bg-slate-50 p-2 rounded border mb-2">
+            <p class="text-[10px] text-red-400 line-through">{{swap.out}}</p>
+            <p class="text-[10px] text-green-600 font-bold">{{swap.in}}</p>
+            <p class="text-[9px] text-slate-400 mt-1">{{swap.reason}}</p>
+          </div>
+          <p *ngIf="analysis.swaps.length === 0" class="text-xs text-slate-400 italic">Squad looks balanced — no urgent swaps needed.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Chat Input -->
-    <div class="mt-auto bg-white border rounded-2xl p-2 flex items-center shadow-lg">
-      <input type="text" placeholder="Ask Gemini to analyze a specific player or pitch condition..." 
-             class="flex-1 px-4 py-2 outline-none text-sm text-slate-600">
-      <button class="bg-green-600 text-white w-10 h-10 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors">
-        ➤
-      </button>
+    <!-- Chat -->
+    <div class="flex-1 bg-white border rounded-2xl shadow-sm flex flex-col overflow-hidden min-h-0">
+
+      <!-- Messages -->
+      <div class="flex-1 overflow-y-auto p-4 space-y-3">
+        <div *ngIf="chatMessages.length === 0" class="h-full flex items-center justify-center text-slate-300 italic text-sm">
+          Ask Coach Gemini anything about your squad...
+        </div>
+
+        <div *ngFor="let msg of chatMessages"
+             class="flex"
+             [class.justify-end]="msg.from === 'user'"
+             [class.justify-start]="msg.from === 'coach'">
+          <div class="max-w-[80%] px-4 py-2 rounded-2xl text-sm"
+               [class.bg-indigo-600]="msg.from === 'user'"
+               [class.text-white]="msg.from === 'user'"
+               [class.bg-slate-100]="msg.from === 'coach'"
+               [class.text-slate-700]="msg.from === 'coach'">
+            {{msg.text}}
+          </div>
+        </div>
+
+        <div *ngIf="coachTyping" class="flex justify-start">
+          <div class="bg-slate-100 px-4 py-2 rounded-2xl text-sm text-slate-400 italic flex items-center gap-1">
+            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style="animation-delay:0ms"></span>
+            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style="animation-delay:150ms"></span>
+            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style="animation-delay:300ms"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="border-t p-3 flex items-center gap-2">
+        <input type="text" [(ngModel)]="chatInput" (keydown)="onKeyDown($event)"
+               placeholder="Ask about pitch, players, strategy..."
+               class="flex-1 px-4 py-2 outline-none text-sm text-slate-600 rounded-xl bg-slate-50 border border-slate-200 focus:border-indigo-300">
+        <button (click)="sendMessage()"
+                [disabled]="!chatInput.trim()"
+                class="bg-green-600 text-white w-10 h-10 rounded-xl flex items-center justify-center hover:bg-green-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+          ➤
+        </button>
+      </div>
     </div>
 
   </div>

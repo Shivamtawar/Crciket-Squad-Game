@@ -518,3 +518,798 @@
 [debug] [2026-05-03T12:00:55.010Z] DEBUG: Finishing up request with event=finish
 [debug] [2026-05-03T12:00:55.010Z] DEBUG: Finishing up request with event=close
 [debug] [2026-05-03T12:00:55.010Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:37.997Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:37.997Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:37.998Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:37.997Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:37.998Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:37.999Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:38.000Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:38.000Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:38.000Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:38.000Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:38.006Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:38.006Z] [functions] Finished "us-central1-api" in 5.901833ms
+[debug] [2026-05-03T12:03:38.006Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:38.006Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:38.006Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:38.006Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:38.022Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/ai/player-analysis/1-2026-05-03T12:03:38.022Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:38.022Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/ai/player-analysis/1-2026-05-03T12:03:38.022Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:38.022Z] Accepted request GET /cricket-squad-game/us-central1/api/ai/player-analysis/1 --> us-central1-api
+[debug] [2026-05-03T12:03:38.023Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:38.023Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/ai/player-analysis/1, mapping to path=/ai/player-analysis/1
+[debug] [2026-05-03T12:03:38.023Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:38.023Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:38.023Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:38.842Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:38.842Z] [functions] Finished "us-central1-api" in 818.93875ms
+[debug] [2026-05-03T12:03:38.842Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:38.842Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:38.842Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:38.842Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:39.543Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:39.543Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:39.543Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:39.543Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:39.543Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:39.543Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:39.544Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:39.544Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:39.544Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:39.544Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:39.547Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:39.547Z] [functions] Finished "us-central1-api" in 2.939291ms
+[debug] [2026-05-03T12:03:39.547Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:39.547Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:39.547Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:39.547Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:39.551Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:39.551Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:39.551Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:39.551Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:39.551Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:39.551Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:39.551Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:39.552Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:39.552Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:39.552Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:39.553Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:39.553Z] [functions] Finished "us-central1-api" in 1.730584ms
+[debug] [2026-05-03T12:03:39.553Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:39.553Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:39.553Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:39.553Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:40.469Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/ai/player-analysis/1-2026-05-03T12:03:40.469Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:40.469Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/ai/player-analysis/1-2026-05-03T12:03:40.469Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:40.469Z] Accepted request GET /cricket-squad-game/us-central1/api/ai/player-analysis/1 --> us-central1-api
+[debug] [2026-05-03T12:03:40.469Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:40.469Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/ai/player-analysis/1, mapping to path=/ai/player-analysis/1
+[debug] [2026-05-03T12:03:40.470Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:40.470Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:40.470Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:40.934Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:40.934Z] [functions] Finished "us-central1-api" in 464.456708ms
+[debug] [2026-05-03T12:03:40.934Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:40.934Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:40.934Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:40.934Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.035Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.035Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.035Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.035Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:46.035Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:46.036Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:46.036Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:46.036Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:46.036Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:46.036Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:46.037Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:46.037Z] [functions] Finished "us-central1-api" in 1.501708ms
+[debug] [2026-05-03T12:03:46.037Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:46.037Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:46.037Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:46.038Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.039Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.039Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.039Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.039Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:46.039Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:46.039Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:46.039Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:46.039Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:46.039Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:46.039Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:46.041Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:46.041Z] [functions] Finished "us-central1-api" in 1.331084ms
+[debug] [2026-05-03T12:03:46.041Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:46.041Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:46.041Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:46.041Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.786Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.785Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.786Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.785Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:46.786Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:46.786Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:46.786Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:46.786Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:46.786Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:46.786Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:46.786Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:46.787Z] [functions] Finished "us-central1-api" in 0.79ms
+[debug] [2026-05-03T12:03:46.787Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:46.787Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:46.787Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:46.787Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.788Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.788Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:46.788Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:03:46.788Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:46.788Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:03:46.788Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:46.789Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:46.789Z] [functions] Finished "us-central1-api" in 0.675375ms
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:46.789Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:46.789Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:56.080Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/ai/player-analysis/19-2026-05-03T12:03:56.080Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:03:56.081Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/ai/player-analysis/19-2026-05-03T12:03:56.080Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:03:56.081Z] Accepted request GET /cricket-squad-game/us-central1/api/ai/player-analysis/19 --> us-central1-api
+[debug] [2026-05-03T12:03:56.081Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:03:56.081Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/ai/player-analysis/19, mapping to path=/ai/player-analysis/19
+[debug] [2026-05-03T12:03:56.081Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:03:56.081Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:03:56.081Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: BUSY
+[debug] [2026-05-03T12:03:56.603Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:03:56.603Z] [functions] Finished "us-central1-api" in 522.062166ms
+[debug] [2026-05-03T12:03:56.603Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: IDLE
+[debug] [2026-05-03T12:03:56.603Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:03:56.603Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:03:56.603Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:04:38.654Z] DEBUG: File /Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/engines/aiEngine.js changed, reloading triggers
+[debug] [2026-05-03T12:04:39.658Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2026-05-03T12:04:40.167Z] > [functions] package.json contents: {
+  "name": "cricket-squad-functions",
+  "version": "1.0.0",
+  "description": "Firebase Cloud Functions for Cricket Squad Game",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  }
+}
+[debug] [2026-05-03T12:04:40.167Z] Building nodejs source
+[debug] [2026-05-03T12:04:40.167Z] Failed to find version of module node: reached end of search path /Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "24". Using node@24 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-03T12:04:40.168Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-03T12:04:40.168Z] Found firebase-functions binary at '/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8003
+
+[debug] [2026-05-03T12:04:40.417Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-03T12:04:44.431Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-03T12:04:44.431Z] DEBUG: [worker-pool] Shutting down IDLE worker (us-central1-api)
+[debug] [2026-05-03T12:04:44.431Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: FINISHING
+[debug] [2026-05-03T12:04:44.431Z] DEBUG: [worker-pool] Shutting down IDLE worker (us-central1-api)
+[debug] [2026-05-03T12:04:44.431Z] DEBUG: [worker-us-central1-api-9fe57566-af29-4afe-acde-c0fa39537c82]: FINISHING
+[debug] [2026-05-03T12:04:44.443Z] DEBUG: [worker-us-central1-api-9fe57566-af29-4afe-acde-c0fa39537c82]: exited
+[debug] [2026-05-03T12:04:44.443Z] DEBUG: [worker-us-central1-api-9fe57566-af29-4afe-acde-c0fa39537c82]: FINISHED
+[debug] [2026-05-03T12:04:44.443Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: exited
+[debug] [2026-05-03T12:04:44.443Z] DEBUG: [worker-us-central1-api-eda67cb3-8bbe-49fa-835b-9dcbfd886ce2]: FINISHED
+[debug] [2026-05-03T12:05:26.919Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:26.919Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:26.919Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:26.919Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:26.919Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:26.920Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:26.920Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:26.920Z] DEBUG: [worker-pool] Cleaned up workers for us-central1-api: 2 --> 0
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-03T12:05:26.922Z] DEBUG: [worker-pool] addWorker(us-central1-api)
+[debug] [2026-05-03T12:05:26.923Z] DEBUG: [worker-pool] Adding worker with key us-central1-api, total=1
+[debug] [2026-05-03T12:05:27.368Z] DEBUG: [runtime-status] [17605] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-05-03T12:05:27.368Z] DEBUG: [runtime-status] [17605] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}
+[debug] [2026-05-03T12:05:27.368Z] DEBUG: [runtime-status] [17605] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2026-05-03T12:05:27.368Z] DEBUG: [runtime-status] [17605] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}
+[debug] [2026-05-03T12:05:27.427Z] DEBUG: [runtime-status] [17605] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-05-03T12:05:27.429Z] DEBUG: [runtime-status] [17605] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}
+[debug] [2026-05-03T12:05:27.488Z] DEBUG: [runtime-status] [17605] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2026-05-03T12:05:27.525Z] DEBUG: [runtime-status] [17605] initializeApp(DEFAULT) {"storageBucket":"cricket-squad-game.appspot.com","databaseURL":"https://cricket-squad-game.firebaseio.com","projectId":"cricket-squad-game"}
+[debug] [2026-05-03T12:05:27.533Z] DEBUG: [runtime-status] [17605] Functions runtime initialized. {"cwd":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions","node_version":"24.14.1"}
+[debug] [2026-05-03T12:05:27.533Z] DEBUG: [runtime-status] [17605] Listening to port: /var/folders/cq/bqn3jj655gs_1tn3rwvb06240000gn/T/fire_emu_48a5197c4d1cc232.sock
+[debug] [2026-05-03T12:05:27.631Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:27.631Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:27.631Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:27.631Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:27.634Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:27.634Z] [functions] Finished "us-central1-api" in 2.594375ms
+[debug] [2026-05-03T12:05:27.634Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:27.634Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:27.634Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:27.634Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:27.638Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:27.638Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:27.638Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:27.638Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:27.638Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:27.638Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:27.638Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:27.638Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:27.638Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:27.638Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:27.639Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:27.639Z] [functions] Finished "us-central1-api" in 0.613292ms
+[debug] [2026-05-03T12:05:27.639Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:27.639Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:27.639Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:27.639Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:30.317Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:30.317Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:30.317Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:30.317Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:30.317Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:30.317Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:30.317Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:30.317Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:30.317Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:30.317Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:30.319Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:30.319Z] [functions] Finished "us-central1-api" in 2.063ms
+[debug] [2026-05-03T12:05:30.319Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:30.319Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:30.319Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:30.319Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:30.321Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:30.321Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:30.321Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:30.321Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:30.321Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:30.321Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:30.321Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:30.321Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:30.321Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:30.321Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:30.323Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:30.323Z] [functions] Finished "us-central1-api" in 1.402ms
+[debug] [2026-05-03T12:05:30.323Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:30.323Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:30.323Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:30.323Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:37.257Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:37.257Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:37.257Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:37.257Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:37.257Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:37.257Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:37.257Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:37.257Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:37.257Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:37.257Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:37.259Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:37.259Z] [functions] Finished "us-central1-api" in 1.7035ms
+[debug] [2026-05-03T12:05:37.259Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:37.259Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:37.259Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:37.259Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:37.261Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:37.261Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:37.262Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:37.261Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:37.262Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:37.262Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:37.262Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:37.262Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:37.262Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:37.262Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:37.263Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:37.263Z] [functions] Finished "us-central1-api" in 1.229334ms
+[debug] [2026-05-03T12:05:37.263Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:37.263Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:37.263Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:37.263Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:44.355Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:44.355Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:44.355Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:44.355Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:44.355Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:44.355Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:44.355Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:44.355Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:44.355Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:44.355Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:44.357Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:44.357Z] [functions] Finished "us-central1-api" in 1.959292ms
+[debug] [2026-05-03T12:05:44.357Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:44.358Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:44.358Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:44.358Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:44.360Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:44.360Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:44.360Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:05:44.360Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:44.360Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:05:44.360Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:44.361Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:05:44.361Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:44.361Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:44.361Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:05:44.362Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:44.362Z] [functions] Finished "us-central1-api" in 1.34525ms
+[debug] [2026-05-03T12:05:44.362Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:44.362Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:44.362Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:44.362Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:50.582Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/ai/auto-suggest-2026-05-03T12:05:50.582Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:05:50.582Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/ai/auto-suggest-2026-05-03T12:05:50.582Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:05:50.582Z] Accepted request POST /cricket-squad-game/us-central1/api/ai/auto-suggest --> us-central1-api
+[debug] [2026-05-03T12:05:50.583Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:05:50.583Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/ai/auto-suggest, mapping to path=/ai/auto-suggest
+[debug] [2026-05-03T12:05:50.583Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:05:50.583Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:05:50.583Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[debug] [2026-05-03T12:05:51.852Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:05:51.852Z] [functions] Finished "us-central1-api" in 1269.1757499999999ms
+[debug] [2026-05-03T12:05:51.852Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:05:51.852Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:05:51.852Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:05:51.852Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:06:58.615Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:06:58.615Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:06:58.616Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:06:58.615Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:06:58.616Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:06:58.616Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:06:58.617Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:06:58.617Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:06:58.617Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:06:58.617Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:06:58.623Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:06:58.623Z] [functions] Finished "us-central1-api" in 6.33075ms
+[debug] [2026-05-03T12:06:58.623Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:06:58.623Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:06:58.623Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:06:58.623Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:06:58.624Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:06:58.624Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:06:58.625Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:06:58.624Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:06:58.625Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:06:58.625Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:06:58.625Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:06:58.625Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:06:58.625Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:06:58.625Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:06:58.626Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:06:58.626Z] [functions] Finished "us-central1-api" in 1.145959ms
+[debug] [2026-05-03T12:06:58.626Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:06:58.626Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:06:58.626Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:06:58.626Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:01.128Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:01.128Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:01.128Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:01.128Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:01.128Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:01.128Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:01.129Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:01.129Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:01.129Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:01.129Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:01.130Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:01.130Z] [functions] Finished "us-central1-api" in 1.358417ms
+[debug] [2026-05-03T12:07:01.130Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:01.130Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:01.130Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:01.130Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:01.131Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:01.131Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:01.131Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:01.131Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:01.131Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:01.131Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:01.131Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:01.131Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:01.131Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:01.131Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:01.132Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:01.132Z] [functions] Finished "us-central1-api" in 0.818083ms
+[debug] [2026-05-03T12:07:01.132Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:01.132Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:01.132Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:01.132Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:08.394Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:08.394Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:08.394Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:08.394Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:08.394Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:08.395Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:08.395Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:08.395Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:08.395Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:08.395Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:08.396Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:08.396Z] [functions] Finished "us-central1-api" in 1.64375ms
+[debug] [2026-05-03T12:07:08.396Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:08.396Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:08.397Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:08.397Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:08.399Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:08.399Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:08.399Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:08.399Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:08.399Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:08.400Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:08.400Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:08.400Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:08.400Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:08.400Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:08.401Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:08.401Z] [functions] Finished "us-central1-api" in 1.074708ms
+[debug] [2026-05-03T12:07:08.401Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:08.401Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:08.401Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:08.401Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:26.462Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:26.462Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:26.463Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:26.462Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:26.463Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:26.463Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:26.463Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:26.463Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:26.463Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:26.463Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:26.465Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:26.465Z] [functions] Finished "us-central1-api" in 1.911584ms
+[debug] [2026-05-03T12:07:26.465Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:26.465Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:26.465Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:26.465Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:26.468Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:26.468Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:26.468Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:26.468Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:26.468Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:26.469Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:26.469Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:26.469Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:26.469Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:26.469Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:26.471Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:26.471Z] [functions] Finished "us-central1-api" in 2.390083ms
+[debug] [2026-05-03T12:07:26.471Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:26.471Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:26.471Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:26.471Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:31.809Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:31.809Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:31.809Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:31.809Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:31.809Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:31.809Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:31.810Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:31.810Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:31.810Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:31.810Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:31.811Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:31.811Z] [functions] Finished "us-central1-api" in 1.342208ms
+[debug] [2026-05-03T12:07:31.811Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:31.811Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:31.811Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:31.811Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:31.814Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:31.814Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:07:31.814Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:07:31.814Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:07:31.814Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:07:31.814Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:07:31.814Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:07:31.814Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:07:31.814Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:07:31.814Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:07:31.815Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:07:31.815Z] [functions] Finished "us-central1-api" in 0.955375ms
+[debug] [2026-05-03T12:07:31.815Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:07:31.815Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:07:31.815Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:07:31.815Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:08.196Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:08.196Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:08.199Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:08.196Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:40:08.199Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:40:08.201Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:40:08.202Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:40:08.202Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:40:08.202Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:40:08.203Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:40:08.218Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:40:08.218Z] [functions] Finished "us-central1-api" in 15.567167ms
+[debug] [2026-05-03T12:40:08.218Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:40:08.218Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:40:08.218Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:40:08.218Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:08.219Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:08.219Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:08.220Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:08.219Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:40:08.220Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:40:08.220Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:40:08.220Z] [functions] Finished "us-central1-api" in 0.50475ms
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:40:08.220Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:40:08.220Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:26.014Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:26.014Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:26.014Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:26.014Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:40:26.014Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:40:26.014Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:40:26.015Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:40:26.015Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:40:26.015Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:40:26.015Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:40:26.016Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:40:26.016Z] [functions] Finished "us-central1-api" in 1.733958ms
+[debug] [2026-05-03T12:40:26.016Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:40:26.016Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:40:26.016Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:40:26.017Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:26.019Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:26.019Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:40:26.019Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:40:26.019Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:40:26.019Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:40:26.019Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:40:26.019Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:40:26.019Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:40:26.019Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:40:26.019Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:40:26.021Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:40:26.021Z] [functions] Finished "us-central1-api" in 1.336875ms
+[debug] [2026-05-03T12:40:26.021Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:40:26.021Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:40:26.021Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:40:26.021Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:41:29.255Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:41:29.254Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:41:29.259Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:41:29.254Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:41:29.259Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:41:29.261Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:41:29.262Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:41:29.263Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:41:29.263Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:41:29.263Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:41:29.286Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:41:29.286Z] [functions] Finished "us-central1-api" in 23.011042ms
+[debug] [2026-05-03T12:41:29.286Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:41:29.286Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:41:29.286Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:41:29.286Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:41:29.288Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:41:29.288Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:41:29.288Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:41:29.288Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:41:29.288Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:41:29.288Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:41:29.288Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:41:29.288Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:41:29.288Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:41:29.288Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:41:29.289Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:41:29.289Z] [functions] Finished "us-central1-api" in 0.699709ms
+[debug] [2026-05-03T12:41:29.289Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:41:29.289Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:41:29.289Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:41:29.289Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:27.819Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:27.819Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:27.821Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:27.819Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:43:27.821Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:43:27.822Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:43:27.822Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:43:27.822Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:43:27.822Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:43:27.822Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:43:27.827Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:43:27.827Z] [functions] Finished "us-central1-api" in 4.892375ms
+[debug] [2026-05-03T12:43:27.827Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:43:27.827Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:43:27.827Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:43:27.827Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:27.829Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:27.829Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:27.829Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:27.829Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:43:27.830Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:43:27.830Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:43:27.830Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:43:27.830Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:43:27.830Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:43:27.830Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:43:27.833Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:43:27.833Z] [functions] Finished "us-central1-api" in 2.619792ms
+[debug] [2026-05-03T12:43:27.833Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:43:27.833Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:43:27.833Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:43:27.833Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:34.684Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:34.684Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:34.684Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:34.684Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:43:34.684Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:43:34.684Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:43:34.684Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:43:34.684Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:43:34.684Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:43:34.684Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:43:34.685Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:43:34.685Z] [functions] Finished "us-central1-api" in 0.891458ms
+[debug] [2026-05-03T12:43:34.685Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:43:34.685Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:43:34.685Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:43:34.685Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:34.688Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:34.688Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:34.688Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:34.688Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:43:34.688Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:43:34.688Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:43:34.688Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:43:34.688Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:43:34.688Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:43:34.688Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:43:34.689Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:43:34.689Z] [functions] Finished "us-central1-api" in 1.286333ms
+[debug] [2026-05-03T12:43:34.689Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:43:34.689Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:43:34.689Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:43:34.690Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:45.028Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:45.028Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:45.028Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:45.028Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:43:45.028Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:43:45.029Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:43:45.029Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:43:45.029Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:43:45.029Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:43:45.029Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:43:45.031Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:43:45.032Z] [functions] Finished "us-central1-api" in 2.550875ms
+[debug] [2026-05-03T12:43:45.032Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:43:45.032Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:43:45.032Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:43:45.032Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:45.034Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:45.034Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:43:45.034Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:43:45.034Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:43:45.034Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:43:45.034Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:43:45.034Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:43:45.034Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:43:45.034Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:43:45.034Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:43:45.035Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:43:45.035Z] [functions] Finished "us-central1-api" in 1.023792ms
+[debug] [2026-05-03T12:43:45.035Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:43:45.035Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:43:45.035Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:43:45.035Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:46:05.878Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.878Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:46:05.893Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.878Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:46:05.893Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:46:05.894Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:46:05.897Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:46:05.897Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:46:05.897Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:46:05.897Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:46:05.901Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.901Z"],"queueLength":1,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.878Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:46:05.901Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.878Z","/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.901Z"],"workRunningCount":2}
+[debug] [2026-05-03T12:46:05.901Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:46:05.902Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:46:05.902Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-03T12:46:05.907Z] DEBUG: [worker-pool] addWorker(us-central1-api)
+[debug] [2026-05-03T12:46:05.907Z] DEBUG: [worker-pool] Adding worker with key us-central1-api, total=2
+[debug] [2026-05-03T12:46:05.909Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:46:05.910Z] [functions] Finished "us-central1-api" in 12.254041ms
+[debug] [2026-05-03T12:46:05.910Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:46:05.910Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:46:05.910Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:46:05.910Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.901Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:46:05.912Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.912Z"],"queueLength":1,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.901Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:46:05.912Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.901Z","/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.912Z"],"workRunningCount":2}
+[debug] [2026-05-03T12:46:05.912Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:46:05.913Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:46:05.913Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:46:05.913Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:46:05.913Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:46:05.913Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:46:05.915Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:46:05.915Z] [functions] Finished "us-central1-api" in 2.684667ms
+[debug] [2026-05-03T12:46:05.915Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:46:05.915Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:46:05.915Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:46:05.915Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:05.901Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:46:06.428Z] DEBUG: [runtime-status] [18988] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-05-03T12:46:06.428Z] DEBUG: [runtime-status] [18988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}
+[debug] [2026-05-03T12:46:06.428Z] DEBUG: [runtime-status] [18988] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2026-05-03T12:46:06.429Z] DEBUG: [runtime-status] [18988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}
+[debug] [2026-05-03T12:46:06.516Z] DEBUG: [runtime-status] [18988] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2026-05-03T12:46:06.518Z] DEBUG: [runtime-status] [18988] Resolved module firebase-functions {"declared":true,"installed":true,"version":"5.1.1","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-functions/lib/v1/index.js"}
+[debug] [2026-05-03T12:46:06.589Z] DEBUG: [runtime-status] [18988] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2026-05-03T12:46:06.637Z] DEBUG: [runtime-status] [18988] initializeApp(DEFAULT) {"storageBucket":"cricket-squad-game.appspot.com","databaseURL":"https://cricket-squad-game.firebaseio.com","projectId":"cricket-squad-game"}
+[debug] [2026-05-03T12:46:06.646Z] DEBUG: [runtime-status] [18988] Functions runtime initialized. {"cwd":"/Users/apple/Desktop/hackathon/gdg-nashik/cricket-squad-builder/backend/functions","node_version":"24.14.1"}
+[debug] [2026-05-03T12:46:06.646Z] DEBUG: [runtime-status] [18988] Listening to port: /var/folders/cq/bqn3jj655gs_1tn3rwvb06240000gn/T/fire_emu_c9578e7d1395ac56.sock
+[debug] [2026-05-03T12:46:06.720Z] DEBUG: [worker-us-central1-api-9b60931a-d99d-47a5-b7f4-e4324caceaaa]: IDLE
+[debug] [2026-05-03T12:46:06.720Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:46:06.720Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:46:06.720Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:46:06.721Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:46:06.721Z] [functions] Finished "us-central1-api" in 0.735458ms
+[debug] [2026-05-03T12:46:06.721Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:46:06.721Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:46:06.721Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:46:06.721Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:46:06.723Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:06.723Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:46:06.723Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:46:06.723Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:46:06.723Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:46:06.724Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:46:06.724Z] [functions] Finished "us-central1-api" in 0.472958ms
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:46:06.724Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:46:06.724Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:18.102Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.102Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:18.104Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.102Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:18.104Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:49:18.105Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:49:18.105Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:49:18.105Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:49:18.105Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:49:18.105Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:49:18.107Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.107Z"],"queueLength":1,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.102Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:18.108Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.102Z","/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.107Z"],"workRunningCount":2}
+[debug] [2026-05-03T12:49:18.108Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:49:18.108Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:49:18.108Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:49:18.108Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:49:18.108Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:49:18.108Z] DEBUG: [worker-us-central1-api-9b60931a-d99d-47a5-b7f4-e4324caceaaa]: BUSY
+[debug] [2026-05-03T12:49:18.112Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:49:18.112Z] [functions] Finished "us-central1-api" in 6.893459ms
+[debug] [2026-05-03T12:49:18.112Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:49:18.112Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:49:18.112Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:49:18.112Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:18.107Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:18.120Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:49:18.120Z] [functions] Finished "us-central1-api" in 12.02225ms
+[debug] [2026-05-03T12:49:18.120Z] DEBUG: [worker-us-central1-api-9b60931a-d99d-47a5-b7f4-e4324caceaaa]: IDLE
+[debug] [2026-05-03T12:49:18.120Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:49:18.120Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:49:18.120Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.204Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.204Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.204Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.204Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:22.204Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:49:22.204Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:49:22.204Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:49:22.204Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:49:22.204Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:49:22.204Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:49:22.206Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:49:22.206Z] [functions] Finished "us-central1-api" in 1.3ms
+[debug] [2026-05-03T12:49:22.206Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:49:22.206Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:49:22.206Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:49:22.206Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.209Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.209Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.209Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.209Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:22.209Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:49:22.209Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:49:22.209Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:49:22.209Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:49:22.209Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:49:22.209Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:49:22.210Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:49:22.210Z] [functions] Finished "us-central1-api" in 1.160542ms
+[debug] [2026-05-03T12:49:22.210Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:49:22.211Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:49:22.211Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:49:22.211Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.823Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.823Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.823Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.823Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:22.823Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:49:22.824Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:49:22.824Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:49:22.824Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:49:22.824Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:49:22.824Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:49:22.825Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:49:22.825Z] [functions] Finished "us-central1-api" in 1.453583ms
+[debug] [2026-05-03T12:49:22.825Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:49:22.825Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:49:22.825Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:49:22.825Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.827Z] [work-queue] {"queuedWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.827Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-03T12:49:22.827Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/cricket-squad-game/us-central1/api/draft/players-2026-05-03T12:49:22.827Z"],"workRunningCount":1}
+[debug] [2026-05-03T12:49:22.827Z] Accepted request GET /cricket-squad-game/us-central1/api/draft/players --> us-central1-api
+[debug] [2026-05-03T12:49:22.827Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2026-05-03T12:49:22.827Z] DEBUG: [functions] Got req.url=/cricket-squad-game/us-central1/api/draft/players, mapping to path=/draft/players
+[debug] [2026-05-03T12:49:22.828Z] DEBUG: [worker-pool] submitRequest(triggerId=us-central1-api)
+[debug] [2026-05-03T12:49:22.828Z] [functions] Beginning execution of "us-central1-api"
+[debug] [2026-05-03T12:49:22.828Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: BUSY
+[debug] [2026-05-03T12:49:22.829Z] DEBUG: Finishing up request with event=pause
+[debug] [2026-05-03T12:49:22.829Z] [functions] Finished "us-central1-api" in 1.46525ms
+[debug] [2026-05-03T12:49:22.829Z] DEBUG: [worker-us-central1-api-58061c09-798f-418c-b9b7-3944685db5ef]: IDLE
+[debug] [2026-05-03T12:49:22.829Z] DEBUG: Finishing up request with event=finish
+[debug] [2026-05-03T12:49:22.829Z] DEBUG: Finishing up request with event=close
+[debug] [2026-05-03T12:49:22.829Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}

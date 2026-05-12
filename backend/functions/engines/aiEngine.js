@@ -91,8 +91,10 @@ async function getTeamAnalysis(teamIds) {
 
     Return the response as a JSON object with:
     - teamRating: Number (1-100)
-    - verdict: String (overall assessment)
-    - improvements: Array of strings
+    - verdict: String (a professional cricket coach's summary, max 2-3 sentences)
+    - strengths: Array of strings (3-4 core strengths)
+    - vulnerabilities: Array of strings (2-3 weaknesses)
+    - swaps: Array of objects { from: string, to: string, reason: string } (tactical player suggestions)
   `;
 
   try {

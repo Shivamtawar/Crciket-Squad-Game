@@ -1,25 +1,72 @@
-<header class="h-16 bg-white border-b px-8 flex items-center justify-between">
-  <h1 class="text-xl font-black text-slate-800 tracking-tight italic">SQUAD BUILDER XI</h1>
-  
-  <div class="flex items-center space-x-8">
+<!-- Responsive header: stacks vertically on mobile -->
+<header class="bg-white border-b px-4 md:px-8 flex flex-col md:flex-row md:h-16 md:items-center justify-between py-2 md:py-0 gap-2 md:gap-0">
+  <h1 class="text-lg md:text-xl font-black text-slate-800 tracking-tight italic">SQUAD BUILDER XI</h1>
+
+  <div class="flex items-center gap-3 flex-wrap">
     <ng-container *ngIf="selectedSquad$ | async as squad">
-      <button (click)="startMatch(squad.length)"
-              [disabled]="squad.length !== 11"
-              class="px-4 py-2 rounded-xl font-black uppercase tracking-widest text-xs border border-emerald-500 text-emerald-600 hover:bg-emerald-50 transition disabled:opacity-40 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400">
-        Play Match
-      </button>
-    </ng-container>
-    <div class="flex flex-col items-end">
-      <div class="flex items-center space-x-2">
-        <span class="text-xl font-bold">85</span><span class="text-slate-400">/100</span>
+    <ng-container *ngIf="creditsLeft$ | async as left">
+    <ng-container *ngIf="creditsPct$ | async as pct">
+
+      <!-- Play Match button -->
+      <div class="relative group">
+        <button (click)="startMatch(squad.length, left)"
+                [disabled]="squad.length !== 11 || left < 0"
+                class="px-3 py-2 rounded-xl font-black uppercase tracking-widest text-xs border border-emerald-500 text-emerald-600 hover:bg-emerald-50 transition disabled:opacity-40 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400">
+          Play Match
+        </button>
+        <div *ngIf="squad.length === 11 && left < 0"
+             class="absolute top-10 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity z-50">
+          ⚠️ Remove players to fix budget
+        </div>
       </div>
-      <span class="text-[10px] font-bold text-green-600 uppercase tracking-widest">Credits Left</span>
-    </div>
-    <div class="w-48 h-2 bg-gray-200 rounded-full overflow-hidden">
-      <div class="bg-green-500 h-full w-[85%]"></div>
-    </div>
-    <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center border">
+
+      <!-- Credits display -->
+      <div class="flex items-center gap-2 md:gap-4">
+        <div class="flex flex-col items-end">
+          <div class="flex items-baseline space-x-1">
+            <span class="text-lg md:text-xl font-black"
+                  [class.text-emerald-600]="left > 20"
+                  [class.text-amber-500]="left > 0 && left <= 20"
+                  [class.text-red-500]="left <= 0">
+              {{ left }}
+            </span>
+            <span class="text-slate-400 text-xs md:text-sm font-bold">/ {{ totalBudget }} Cr</span>
+          </div>
+          <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest"
+                [class.text-emerald-600]="left > 20"
+                [class.text-amber-500]="left > 0 && left <= 20"
+                [class.text-red-500]="left <= 0">
+            {{ left < 0 ? 'Over Budget!' : left === 0 ? 'Budget Full' : 'Credits Left' }}
+          </span>
+        </div>
+
+        <!-- Progress bar - hide on very small screens -->
+        <div class="hidden sm:block w-24 md:w-40 h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div class="h-full rounded-full transition-all duration-500"
+               [class.bg-emerald-500]="pct > 20"
+               [class.bg-amber-400]="pct > 0 && pct <= 20"
+               [class.bg-red-500]="pct <= 0"
+               [style.width.%]="pct < 0 ? 100 : pct">
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+    </ng-container>
+    </ng-container>
+
+    <!-- Avatar -->
+    <div class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-slate-100 flex items-center justify-center border text-lg">
       👤
     </div>
   </div>
 </header>
+
+<!-- Over-Budget Banner -->
+<ng-container *ngIf="creditsLeft$ | async as left">
+  <div *ngIf="left < 0"
+       class="w-full bg-red-600 text-white text-xs font-bold flex items-center justify-center space-x-2 py-2 z-40">
+    <span>⚠️</span>
+    <span class="text-center">You are over budget by {{ left * -1 | number:'1.1-1' }} Cr — Please choose players within credits to enable Play Match.</span>
+  </div>
+</ng-container>

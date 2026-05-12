@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
 import { ApiPlayer, ApiService } from './api.service';
 
 export interface Player {
@@ -27,15 +26,9 @@ export class PlayerService {
     constructor(private api: ApiService) {}
 
     loadPlayers(): Observable<Player[]> {
-        return this.api.getPlayers().pipe(
-            map((response) => response.players.map((player) => this.mapApiPlayer(player))),
-            tap((players) => this.playersSubject.next(players)),
-            catchError(() => {
-                const fallback = this.getFallbackPlayers();
-                this.playersSubject.next(fallback);
-                return of(fallback);
-            })
-        );
+        const players = this.getFallbackPlayers();
+        this.playersSubject.next(players);
+        return of(players);
     }
 
     getPlayers(): Player[] {

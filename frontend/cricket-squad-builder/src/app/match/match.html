@@ -1,104 +1,130 @@
-<div class="max-w-6xl mx-auto space-y-6">
-  <div class="flex items-center justify-between">
-    <div>
-      <a routerLink="/" class="text-sm font-bold text-slate-500 hover:text-slate-700">Back to squad builder</a>
-      <h1 class="text-3xl font-black text-slate-900 mt-2">Match Center</h1>
-      <p class="text-sm text-slate-500">Your XI takes on a computer-selected XI.</p>
+<div class="max-w-6xl mx-auto px-2 md:px-0">
+
+  <!-- Error State -->
+  <div *ngIf="error" class="p-6 rounded-2xl border bg-white text-red-600 font-bold">{{ error }}</div>
+
+  <!-- ══════════════ CINEMATIC LOADING SCREEN ══════════════ -->
+  <div *ngIf="isLoading && !error"
+       class="fixed inset-0 z-50 bg-slate-950 flex flex-col items-center justify-center space-y-8 px-4">
+    <div class="text-5xl md:text-6xl animate-bounce">🏏</div>
+    <h1 class="text-2xl md:text-3xl font-black text-white tracking-tight italic text-center">MATCH LOADING</h1>
+
+    <div class="w-64 md:w-80 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+      <div class="h-full bg-emerald-500 rounded-full transition-all duration-500" [style.width.%]="loadingProgress"></div>
     </div>
-    <button (click)="simulateMatch()"
-            class="px-4 py-2 rounded-xl font-bold text-sm border border-slate-200 text-slate-700 hover:bg-slate-50">
-      Simulate Again
-    </button>
-  </div>
 
-  <div *ngIf="error" class="p-6 rounded-2xl border bg-white text-red-600 font-bold">
-    {{ error }}
-  </div>
-
-  <div *ngIf="!error" class="space-y-6">
-    <div class="grid grid-cols-3 gap-6">
-      <div class="col-span-2 bg-white border rounded-3xl p-6 shadow-sm">
-        <h2 class="text-xs font-black uppercase tracking-widest text-slate-400">Match Result</h2>
-        <p class="text-2xl font-black text-slate-900 mt-2">{{ resultHeadline }}</p>
-        <p class="text-sm text-slate-500 mt-1">{{ resultDetail }}</p>
-
-        <div class="mt-5 rounded-2xl border bg-slate-50 p-4">
-          <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Win Probability</h3>
-          <div *ngIf="loadingWinProbability" class="text-sm text-slate-500 mt-2">Loading probability...</div>
-          <div *ngIf="!loadingWinProbability" class="mt-2">
-            <p class="text-2xl font-black text-emerald-600">{{ winProbability }}%</p>
-            <p class="text-xs text-slate-500 mt-1">Key factor: {{ winKeyFactor }}</p>
-            <p class="text-[10px] text-slate-400 uppercase mt-2">Boss difficulty: {{ winDifficulty }}</p>
-          </div>
-        </div>
-
-        <div class="mt-6 grid grid-cols-2 gap-4">
-          <div class="p-4 rounded-2xl border bg-slate-50">
-            <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Your XI Score</p>
-            <p class="text-2xl font-black text-emerald-600 mt-2">{{ userTotal }}</p>
-          </div>
-          <div class="p-4 rounded-2xl border bg-slate-50">
-            <p class="text-xs uppercase tracking-widest text-slate-400 font-bold">Computer XI Score</p>
-            <p class="text-2xl font-black text-indigo-600 mt-2">{{ cpuTotal }}</p>
-          </div>
-        </div>
+    <div class="space-y-3 w-64 md:w-72">
+      <div *ngFor="let phase of phases"
+           class="flex items-center space-x-3 transition-all duration-300"
+           [class.opacity-20]="!phase.done"
+           [class.opacity-100]="phase.done">
+        <span class="text-lg md:text-xl">{{ phase.icon }}</span>
+        <span class="font-bold text-sm" [class.text-emerald-400]="phase.done" [class.text-slate-500]="!phase.done">{{ phase.label }}</span>
+        <span *ngIf="phase.done" class="ml-auto text-emerald-500 font-black text-xs">✓</span>
       </div>
+    </div>
+  </div>
 
-      <div class="bg-white border rounded-3xl p-6 shadow-sm">
-        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Momentum</h3>
-        <div class="mt-4 space-y-3">
-          <div class="flex items-center justify-between text-xs font-bold">
-            <span class="text-emerald-600">Your XI</span>
-            <span class="text-slate-400">{{ userTotal }}</span>
-          </div>
-          <div class="h-2 rounded-full bg-emerald-100 overflow-hidden">
-            <div class="h-full bg-emerald-500" [style.width.%]="(userTotal / (userTotal + cpuTotal)) * 100"></div>
-          </div>
-          <div class="flex items-center justify-between text-xs font-bold mt-4">
-            <span class="text-indigo-600">Computer XI</span>
-            <span class="text-slate-400">{{ cpuTotal }}</span>
-          </div>
-          <div class="h-2 rounded-full bg-indigo-100 overflow-hidden">
-            <div class="h-full bg-indigo-500" [style.width.%]="(cpuTotal / (userTotal + cpuTotal)) * 100"></div>
-          </div>
-        </div>
+  <!-- ══════════════ MATCH RESULT ══════════════ -->
+  <div *ngIf="!isLoading && !error" class="space-y-4 md:space-y-6">
+
+    <!-- Header -->
+    <div class="flex items-start md:items-center justify-between gap-4">
+      <div>
+        <a routerLink="/" class="text-sm font-bold text-slate-500 hover:text-slate-700">← Back to Squad</a>
+        <h1 class="text-2xl md:text-3xl font-black text-slate-900 mt-1 md:mt-2">Match Center</h1>
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-6">
-      <div class="bg-white border rounded-3xl p-6 shadow-sm">
-        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Your XI</h3>
-        <div class="mt-4 space-y-3">
-          <div *ngFor="let player of userSquad" class="flex items-center justify-between p-2 border rounded-xl">
-            <div class="flex items-center gap-3">
+    <!-- Result Card -->
+    <div *ngIf="showResult" class="bg-white border rounded-3xl p-5 md:p-8 shadow-sm animate-fade-in">
+      <p class="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">Match Result</p>
+      <p class="text-2xl md:text-4xl font-black text-slate-900">{{ resultHeadline }}</p>
+      <p class="text-slate-500 mt-1 md:mt-2 text-sm md:text-base">{{ resultDetail }}</p>
+
+      <!-- Stats Row: stack on mobile, 3-col on sm+ -->
+      <div *ngIf="showStats" class="mt-4 md:mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+        <div class="p-3 md:p-4 rounded-2xl border bg-emerald-50">
+          <p class="text-xs font-black uppercase tracking-widest text-slate-400">Your XI Score</p>
+          <p class="text-2xl md:text-3xl font-black text-emerald-600 mt-1">{{ userTotal }}</p>
+        </div>
+        <div class="p-3 md:p-4 rounded-2xl border bg-indigo-50">
+          <p class="text-xs font-black uppercase tracking-widest text-slate-400">Computer XI Score</p>
+          <p class="text-2xl md:text-3xl font-black text-indigo-600 mt-1">{{ cpuTotal }}</p>
+        </div>
+        <div class="p-3 md:p-4 rounded-2xl border bg-slate-50">
+          <p class="text-xs font-black uppercase tracking-widest text-slate-400">AI Win Prob.</p>
+          <p *ngIf="winProbability !== null" class="text-2xl md:text-3xl font-black text-amber-500 mt-1">{{ winProbability }}%</p>
+          <p *ngIf="winProbability === null" class="text-xs text-slate-400 mt-2 animate-pulse">Calculating…</p>
+          <p *ngIf="winKeyFactor" class="text-[10px] text-slate-400 mt-1 italic">{{ winKeyFactor }}</p>
+        </div>
+      </div>
+
+      <!-- Momentum Bar -->
+      <div *ngIf="showStats" class="mt-4 md:mt-6 rounded-2xl bg-slate-50 border p-3 md:p-4">
+        <p class="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">Momentum</p>
+        <div class="flex items-center space-x-3">
+          <span class="text-xs font-bold text-emerald-600 w-12 md:w-16 text-right">Your XI</span>
+          <div class="flex-1 h-2 md:h-3 rounded-full bg-emerald-100 overflow-hidden">
+            <div class="h-full bg-emerald-500 rounded-full transition-all duration-1000"
+                 [style.width.%]="(userTotal / (userTotal + cpuTotal)) * 100"></div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3 mt-2">
+          <span class="text-xs font-bold text-indigo-600 w-12 md:w-16 text-right">CPU XI</span>
+          <div class="flex-1 h-2 md:h-3 rounded-full bg-indigo-100 overflow-hidden">
+            <div class="h-full bg-indigo-500 rounded-full transition-all duration-1000"
+                 [style.width.%]="(cpuTotal / (userTotal + cpuTotal)) * 100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player Lineups: stack on mobile, side by side on md+ -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
+      <!-- Your XI -->
+      <div *ngIf="showUserSquad" class="bg-white border rounded-3xl p-4 md:p-6 shadow-sm">
+        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-3 md:mb-4">Your XI</h3>
+        <div class="space-y-2">
+          <div *ngFor="let player of userSquad; let i = index"
+               class="flex items-center justify-between p-2 border rounded-xl transition-all duration-500"
+               [class.opacity-0]="!revealedUserPlayers[i]"
+               [class.opacity-100]="revealedUserPlayers[i]">
+            <div class="flex items-center gap-2 md:gap-3 min-w-0">
               <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
-                   class="w-9 h-9 rounded-full border">
-              <div>
-                <p class="text-sm font-bold text-slate-800">{{ player.cardName }}</p>
+                   class="w-8 h-8 md:w-9 md:h-9 rounded-full border flex-shrink-0">
+              <div class="min-w-0">
+                <p class="text-xs md:text-sm font-bold text-slate-800 truncate">{{ player.cardName }}</p>
                 <p class="text-[10px] text-slate-400 uppercase">{{ player.role }}</p>
               </div>
             </div>
-            <span class="text-xs font-black text-slate-500">{{ player.score }}</span>
+            <span class="text-xs font-black text-emerald-600 flex-shrink-0 ml-2">{{ player.score }}</span>
           </div>
         </div>
       </div>
 
-      <div class="bg-white border rounded-3xl p-6 shadow-sm">
-        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400">Computer XI</h3>
-        <div class="mt-4 space-y-3">
-          <div *ngFor="let player of cpuSquad" class="flex items-center justify-between p-2 border rounded-xl">
-            <div class="flex items-center gap-3">
+      <!-- CPU XI -->
+      <div *ngIf="showCpuSquad" class="bg-white border rounded-3xl p-4 md:p-6 shadow-sm">
+        <h3 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-3 md:mb-4">Computer XI</h3>
+        <div class="space-y-2">
+          <div *ngFor="let player of cpuSquad; let i = index"
+               class="flex items-center justify-between p-2 border rounded-xl transition-all duration-500"
+               [class.opacity-0]="!revealedCpuPlayers[i]"
+               [class.opacity-100]="revealedCpuPlayers[i]">
+            <div class="flex items-center gap-2 md:gap-3 min-w-0">
               <img [src]="player.imageUrl" (error)="onPlayerImageError($event, player)"
-                   class="w-9 h-9 rounded-full border">
-              <div>
-                <p class="text-sm font-bold text-slate-800">{{ player.cardName }}</p>
+                   class="w-8 h-8 md:w-9 md:h-9 rounded-full border flex-shrink-0">
+              <div class="min-w-0">
+                <p class="text-xs md:text-sm font-bold text-slate-800 truncate">{{ player.cardName }}</p>
                 <p class="text-[10px] text-slate-400 uppercase">{{ player.role }}</p>
               </div>
             </div>
-            <span class="text-xs font-black text-slate-500">{{ player.score }}</span>
+            <span class="text-xs font-black text-indigo-600 flex-shrink-0 ml-2">{{ player.score }}</span>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>

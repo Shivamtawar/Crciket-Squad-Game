@@ -82,6 +82,7 @@ Generates a 20-over play-by-play log with:
 - **📊 Analytical**: Best value-for-money picks (stats/cost ratio)
 - **🛡️ Defensive**: Warns about weak bowling lineup
 - **🧤 Reminder**: Alerts if no wicket-keeper picked
+- **🧠 Coach Gemini (Team Audit)**: When the squad is full (11/11), Gemini provides a deep strategic audit, identifies vulnerabilities, and suggests tactical swaps.
 
 ### 4. Gemini AI Integration (New 🚀)
 The backend now leverages the **Google Gemini 1.5 Flash** model to provide:
